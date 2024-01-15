@@ -33,5 +33,8 @@ public class CreatingJavaStreams {
         // Iterate
         Stream<Integer> infiniteNumbers = Stream.iterate(1, n -> n + 1).limit(10);
 
+        //Generate
+        Stream<Double> integerStream = Stream.generate(Math::random).limit(5);
+
     }
 }
