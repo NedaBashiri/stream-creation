@@ -41,5 +41,9 @@ public class CreatingJavaStreams {
         List<String> names = Arrays.asList("zara", "sara", "lili");
         Stream<String> namesStream = names.stream();
 
+        // IntStream.range and rangeClosed
+        IntStream.range(1, 5);
+        IntStream.rangeClosed(1, 5);
+
     }
 }
