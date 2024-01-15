@@ -1,3 +1,7 @@
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -14,6 +18,17 @@ public class CreatingJavaStreams {
         // Streams from arrays
         int[] array = {1,2,3,4,5,6};
         IntStream numbers = Arrays.stream(array);
+
+        // Streams from files
+        long uniqueWords = 0 ;
+        try(Stream<String> lines =
+                    Files.lines(Paths.get("data.txt"), Charset.defaultCharset())){
+            uniqueWords = lines.flatMap(line -> Arrays.stream(line.split(" ")))
+                    .distinct()
+                    .count();
+        }catch (IOException e){
+
+        }
 
     }
 }
