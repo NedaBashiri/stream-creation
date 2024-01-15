@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class CreatingJavaStreams {
@@ -8,6 +10,10 @@ public class CreatingJavaStreams {
 
         // empty stream using the empty method
         Stream<String> emptyStream = Stream.empty();
+
+        // Streams from arrays
+        int[] array = {1,2,3,4,5,6};
+        IntStream numbers = Arrays.stream(array);
 
     }
 }
