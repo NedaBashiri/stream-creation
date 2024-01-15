@@ -49,5 +49,9 @@ public class CreatingJavaStreams {
         Stream.Builder<String> builder = Stream.builder();
         Stream<String> customStream = builder.add("One").add("Two").add("Three").build();
 
+        //Parallel Stream
+        List<String> words = Arrays.asList("Apple", "Banana", "Orange", "Grape", "Kiwi");
+        Stream<String> parallelStream = words.parallelStream();
+
     }
 }
