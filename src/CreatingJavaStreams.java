@@ -3,6 +3,7 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -35,6 +36,10 @@ public class CreatingJavaStreams {
 
         //Generate
         Stream<Double> integerStream = Stream.generate(Math::random).limit(5);
+
+        //Collection
+        List<String> names = Arrays.asList("zara", "sara", "lili");
+        Stream<String> namesStream = names.stream();
 
     }
 }
