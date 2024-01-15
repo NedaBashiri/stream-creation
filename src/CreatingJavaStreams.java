@@ -45,5 +45,9 @@ public class CreatingJavaStreams {
         IntStream.range(1, 5);
         IntStream.rangeClosed(1, 5);
 
+        //Stream.builder
+        Stream.Builder<String> builder = Stream.builder();
+        Stream<String> customStream = builder.add("One").add("Two").add("Three").build();
+
     }
 }
